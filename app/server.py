@@ -13,7 +13,6 @@ from core.fastapi.dependencies import Logging
 from core.fastapi.middlewares import (
     AuthenticationMiddleware,
     AuthBackend,
-    SQLAlchemyMiddleware,
     ResponseLogMiddleware,
 )
 from core.helpers.cache import Cache, RedisBackend, CustomKeyMaker
@@ -61,7 +60,6 @@ def make_middleware() -> List[Middleware]:
             backend=AuthBackend(),
             on_error=on_auth_error,
         ),
-        Middleware(SQLAlchemyMiddleware),
         Middleware(ResponseLogMiddleware),
     ]
     return middleware
