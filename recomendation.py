@@ -1,0 +1,199 @@
+import numpy as np
+import pandas as pd
+import seaborn as sns
+from scipy import sparse as sp
+from sklearn.metrics import pairwise as pw
+from popular_recomendation import popularity_recommender
+from lightfm import LightFM
+from lightfm.evaluation import precision_at_k, recall_at_k, auc_score, reciprocal_rank
+
+sns.set()
+pd.set_option("display.max_columns", None)
+
+
+def create_user_dict(interactions):
+    user_id = list(interactions.index)
+    user_dict = {}
+    counter = 0
+
+    for i in user_id:
+        user_dict[i] = counter
+        counter += 1
+
+    new_dict = dict([(value, key) for key, value in user_dict.items()])
+
+    return new_dict
+
+
+# Function to create an item dictionary based on their item_id and item name
+def create_item_dict(df, id_col, name_col):
+    item_dict = {}
+
+    for i in range(df.shape[0]):
+        item_dict[(df.loc[i, id_col])] = df.loc[i, name_col]
+
+    return item_dict
+
+
+# Function to produce user recommendations
+def find_key_by_value(dictionary, value):
+    for key, val in dictionary.items():
+        if val == value:
+            return key
+    return None
+
+def sample_recommendation_user(
+    model,
+    interactions,
+    user_id,
+    user_dict,
+    item_dict,
+    threshold=0,
+    nrec_items=10,
+    show=True,
+):
+    print(interactions)
+    n_users, n_items = interactions.shape
+    user_x = find_key_by_value(user_dict, user_id)
+    scores = pd.Series(model.predict(user_x, np.arange(n_items)))
+    scores.index = interactions.columns
+    scores = list(pd.Series(scores.sort_values(ascending=False).index))
+    known_items = list(
+        pd.Series(
+            interactions.loc[user_id, :][interactions.loc[user_id, :] > threshold].index
+        ).sort_values(ascending=False)
+    )
+
+    scores = [x for x in scores if x not in known_items]
+    return_score_list = scores[0:nrec_items]
+    known_items = list(pd.Series(known_items).apply(lambda x: item_dict[x]))
+    scores = list(pd.Series(return_score_list).apply(lambda x: item_dict[x]))
+
+    if show == True:
+        print("Recommended songs for UserID:", user_id)
+        counter = 1
+        for i in scores:
+            print(str(counter) + "- " + str(i))
+            counter += 1
+
+    return return_score_list
+
+
+def create_item_emdedding_distance_matrix(model, interactions):
+    df_item_norm_sparse = sp.csr_matrix(model.item_embeddings)
+    similarities = pw.cosine_similarity(df_item_norm_sparse)
+    item_emdedding_distance_matrix = pd.DataFrame(similarities)
+    item_emdedding_distance_matrix.columns = interactions.columns
+    item_emdedding_distance_matrix.index = interactions.columns
+
+    return item_emdedding_distance_matrix
+
+
+# Function to create item-item recommendation
+def item_item_recommendation(
+    item_emdedding_distance_matrix, item_id, item_dict, n_items=10, show=True
+):
+    recommended_items = list(
+        pd.Series(
+            item_emdedding_distance_matrix.loc[find_key_by_value(item_dict, item), :]
+            .sort_values(ascending=False)
+            .head(n_items + 1)
+            .index[1 : n_items + 1]
+        )
+    )
+
+    if show == True:
+        print("Song of interest: {0}".format(item_dict[item_id]))
+        print("Song(s) similar to the above item are as follows:-")
+        counter = 1
+
+        for i in recommended_items:
+            print(str(counter) + ". " + item_dict[i])
+            counter += 1
+
+    return recommended_items
+
+
+# Create a subset of top fifty thousand observations to work with, as the entire dataset is TOO expensive to compute on!!!
+triplets = "./train_model/file_20230703173728.txt"
+rawData1 = pd.read_csv(triplets, delimiter="\t")
+rawData = rawData1.head(50000)
+
+# print(rawData.head())
+# print("\n", rawData.tail())
+# print("\n", rawData.describe(include="all"))
+
+data = rawData.groupby(["audio_name"]).agg({"count": "count"}).reset_index()
+data["percentage"] = rawData["count"].div(rawData['count'].sum()) * 100
+# print("\n", data.sort_values(by=["count"], ascending=False).head(10))
+
+# print(data["count"].hist(bins=80))
+
+users = rawData["user_id"].unique()
+popModel = popularity_recommender()
+popModel.create(rawData, "user_id", "audio_name")
+# popModel.create(trainData, 'user_id', 'artist_name') for popularity based recommendations by artists
+# print("\n", popModel.recommend(users[342]))
+
+# Create pivot table (interaction matrix) from the original dataset
+x = rawData.pivot_table(index="user_id", columns="audio_id", values="count")
+xNan = x.fillna(0)
+# print("xNan",xNan)
+interaction = sp.csr_matrix(xNan.values)
+# print(interaction)
+
+"""Personlized hybrid model"""
+
+hybridModel = LightFM(loss="warp-kos", n=20, k=20, learning_schedule="adadelta")
+hybridModel.fit(interaction, epochs=30, num_threads=6)
+
+"""Evaluation of the trained model"""
+
+print(
+    "\nPrecision at K:",
+    precision_at_k(hybridModel, interaction, k=15).mean().round(3) * 100,
+)
+print(
+    "Recall at K:", recall_at_k(hybridModel, interaction, k=500).mean().round(3) * 100
+)
+print(
+    "Area under ROC curve:", auc_score(hybridModel, interaction).mean().round(3) * 100
+)
+print(
+    "Reciprocal Rank:", reciprocal_rank(hybridModel, interaction).mean().round(3) * 100
+)
+
+"""Recommendaing songs personally based on the user"""
+
+# Creating user dictionary based on their index and number in the interaction matrix using recsys library
+userDict = create_user_dict(interactions=x)
+print('\n', userDict)
+
+# Creating a song dictionary based on their songID and artist name
+songDict = create_item_dict(df=rawData, id_col="audio_id", name_col="audio_id")
+print('\n', songDict)
+
+# Recommend songs using lightfm library
+print(
+    sample_recommendation_user(
+        model=hybridModel,
+        interactions=x,
+        user_id=95291,
+        user_dict=userDict,
+        item_dict=songDict,
+        threshold=5,
+        nrec_items=50,
+        show=True,
+    ),
+)
+
+# Recommend songs similar to a given songID
+# songItemDist = create_item_emdedding_distance_matrix(model=hybridModel, interactions=x)
+# print(
+#     item_item_recommendation(
+#         item_emdedding_distance_matrix=songItemDist,
+#         item_id="4962",
+#         item_dict=songDict,
+#         n_items=10,
+#     ),
+# )

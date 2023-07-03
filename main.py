@@ -1,34 +1,34 @@
-import os
+import asyncio
+import logging
 
-import click
 import uvicorn
 
-from core.config import config
+from api import app as app_fastapi
+from scheduler import app as app_rocketry
 
 
-@click.command()
-@click.option(
-    "--env",
-    type=click.Choice(["local", "dev", "prod"], case_sensitive=False),
-    default="local",
-)
-@click.option(
-    "--debug",
-    type=click.BOOL,
-    is_flag=True,
-    default=False,
-)
-def main(env: str, debug: bool):
-    os.environ["ENV"] = env
-    os.environ["DEBUG"] = str(debug)
-    uvicorn.run(
-        app="app.server:app",
-        host=config.APP_HOST,
-        port=config.APP_PORT,
-        reload=True if config.ENV != "production" else False,
-        workers=1,
-    )
+class Server(uvicorn.Server):
+    """Customized uvicorn.Server
+    Uvicorn server overrides signals and we need to include
+    Rocketry to the signals."""
+    def handle_exit(self, sig: int, frame) -> None:
+        app_rocketry.session.shut_down()
+        return super().handle_exit(sig, frame)
 
+
+async def main():
+    "Run Rocketry and FastAPI"
+    server = Server(config=uvicorn.Config(app_fastapi, workers=1, loop="asyncio"))
+
+    api = asyncio.create_task(server.serve())
+    sched = asyncio.create_task(app_rocketry.serve())
+
+    await asyncio.wait([sched, api])
 
 if __name__ == "__main__":
-    main()
+    # Print Rocketry's logs to terminal
+    logger = logging.getLogger("rocketry.task")
+    logger.addHandler(logging.StreamHandler())
+
+    # Run both applications
+    asyncio.run(main())
