@@ -38,7 +38,7 @@ def create_item_dict(df, id_col, name_col):
 # Function to produce user recommendations
 def find_key_by_value(dictionary, value):
     for key, val in dictionary.items():
-        if str(val) == str(value):
+        if val == value:
             return key
     return None
 
@@ -56,8 +56,6 @@ def sample_recommendation_user(
     print(interactions)
     n_users, n_items = interactions.shape
     user_x = find_key_by_value(user_dict, user_id)
-    if user_x is None:
-        return None
     scores = pd.Series(model.predict(user_x, np.arange(n_items)))
     scores.index = interactions.columns
     scores = list(pd.Series(scores.sort_values(ascending=False).index))
@@ -78,7 +76,7 @@ def sample_recommendation_user(
         for i in scores:
             print(str(counter) + "- " + str(i))
             counter += 1
-    print(return_score_list)
+
     return return_score_list
 
 
