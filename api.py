@@ -21,7 +21,13 @@ router_recommendation = APIRouter(tags=["recommendation"])
 @router_recommendation.get("/recommendation")
 async def get_recommendation():
     conn = ConnectionDB()
-    conn.retrieve_log()
+    conn.train_model_audio_history()
     return "Hello"
+
+@router_recommendation.get("/force_train_model")
+async def force_train_model():
+    conn = ConnectionDB()
+    conn.train_model_audio_history()
+    return True
 
 app.include_router(router_recommendation)

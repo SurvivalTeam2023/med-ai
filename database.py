@@ -19,16 +19,18 @@ class ConnectionDB:
             self.close()
         except Exception as e:
             print(f"Exception occurred while closing connection: {e}")
-
-    def retrieve_log(self):
-        prefix = "file_"
+    def create_path_file(self, prefix):
         current_path = os.getcwd()
         folder_path = os.path.join(current_path, "train_model")
         if not os.path.exists(folder_path):
             os.umask(0)
             os.makedirs(folder_path,mode=0o777, exist_ok=False)
         timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-        filename = os.path.join(folder_path,  prefix + timestamp + ".txt")
+        return os.path.join(folder_path,  prefix + timestamp + ".txt")
+    
+    def train_model_audio_history(self):
+        prefix = "train_model_music_history"
+        filename = self.create_path_file(prefix)
         try:
             query = text(
                 """
@@ -36,6 +38,23 @@ class ConnectionDB:
                 FROM history h
                 INNER JOIN audio a ON a.id = h.audio_id
                 INNER JOIN artist a2 ON a2.id = a.artist_id
+                """
+                )
+            df = pd.read_sql(query, self.connection)
+            output_file = filename
+            df.to_csv(output_file, sep="\t", index=False)
+            self.close()  # Close the connection before returning the result
+            return None
+        except Exception as e:
+            print(e)
+             
+    def train_model_user_genre_history(self):
+        prefix = "train_model_genre_history"
+        filename = self.create_path_file(prefix)
+        try:
+            query = text(
+                """
+              
                 """
                 )
             df = pd.read_sql(query, self.connection)
