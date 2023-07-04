@@ -5,8 +5,8 @@ from database import ConnectionDB
 from services import get_audio_ids_recommend_by_user_id, get_audio_similar_with_song_id
 
 app = FastAPI(
-    title="Rocketry with FastAPI",
-    description="This is a REST API for a scheduler. It uses FastAPI as the web framework and Rocketry for scheduling.",
+    title="Med AI",
+    description="This is a REST API for med ai. It uses FastAPI as the web framework and LightFM for recommendation.",
 )
 session = app_rocketry.session
 
