@@ -36,12 +36,10 @@ def get_audio_ids_recommend_by_user_id(user_id):
     raw_data = data_model.head(50000)
     data = raw_data.groupby(["audio_name"]).agg({"count": "count"}).reset_index()
     data["percentage"] = raw_data["count"].div(raw_data["count"].sum()) * 100
-    # users = raw_data["user_id"].unique()
     pop_model = popularity_recommender()
     pop_model.create(raw_data, "user_id", "audio_name")
     x = raw_data.pivot_table(index="user_id", columns="audio_id", values="count")
     x_nan = x.fillna(0)
-    # print("xNan",xNan)
     interaction = sp.csr_matrix(x_nan.values)
     hybrid_model = LightFM(loss="warp-kos", n=20, k=20, learning_schedule="adadelta")
     hybrid_model.fit(interaction, epochs=30, num_threads=6)
@@ -51,7 +49,7 @@ def get_audio_ids_recommend_by_user_id(user_id):
         sample_recommendation_user(
             model=hybrid_model,
             interactions=x,
-            user_id=user_id,
+            user_id=int(user_id),
             user_dict=user_dict,
             item_dict=song_dict,
             threshold=5,
@@ -61,43 +59,27 @@ def get_audio_ids_recommend_by_user_id(user_id):
     )
 
 
-get_audio_ids_recommend_by_user_id(user_id="95291")
-
-# Create a subset of top fifty thousand observations to work with, as the entire dataset is TOO expensive to compute on!!!
-# print(rawData.head())
-# print("\n", rawData.tail())
-# print("\n", rawData.describe(include="all"))
-# print(data["count"].hist(bins=80))
-# print("\n", data.sort_values(by=["count"], ascending=False).head(10))
-
-# popModel.create(trainData, 'user_id', 'artist_name') for popularity based recommendations by artists
-# print("\n", popModel.recommend(users[342]))
-
-# Create pivot table (interaction matrix) from the original dataset
-# print(interaction)
-
-# """Evaluation of the trained model"""
-
-# print(
-#     "\nPrecision at K:",
-#     precision_at_k(hybridModel, interaction, k=15).mean().round(3) * 100,
-# )
-# print(
-#     "Recall at K:", recall_at_k(hybridModel, interaction, k=500).mean().round(3) * 100
-# )
-# print(
-#     "Area under ROC curve:", auc_score(hybridModel, interaction).mean().round(3) * 100
-# )
-# print(
-#     "Reciprocal Rank:", reciprocal_rank(hybridModel, interaction).mean().round(3) * 100
-# )
-# Recommend songs similar to a given songID
-# songItemDist = create_item_emdedding_distance_matrix(model=hybridModel, interactions=x)
-# print(
-#     item_item_recommendation(
-#         item_emdedding_distance_matrix=songItemDist,
-#         item_id="4962",
-#         item_dict=songDict,
-#         n_items=10,
-#     ),
-# )
+def get_audio_similar_with_song_id(audio_id):
+    data_model = load_model_latest_version()
+    raw_data = data_model.head(50000)
+    data = raw_data.groupby(["audio_name"]).agg({"count": "count"}).reset_index()
+    data["percentage"] = raw_data["count"].div(raw_data["count"].sum()) * 100
+    pop_model = popularity_recommender()
+    pop_model.create(raw_data, "user_id", "audio_name")
+    x = raw_data.pivot_table(index="user_id", columns="audio_id", values="count")
+    x_nan = x.fillna(0)
+    interaction = sp.csr_matrix(x_nan.values)
+    hybrid_model = LightFM(loss="warp-kos", n=20, k=20, learning_schedule="adadelta")
+    hybrid_model.fit(interaction, epochs=30, num_threads=6)
+    song_dict = create_item_dict(df=raw_data, id_col="audio_id", name_col="audio_id")
+    song_item_dist = create_item_emdedding_distance_matrix(
+        model=hybrid_model, interactions=x
+    )
+    return (
+        item_item_recommendation(
+            item_emdedding_distance_matrix=song_item_dist,
+            item_id=int(audio_id),
+            item_dict=song_dict,
+            n_items=10,
+        ),
+    )

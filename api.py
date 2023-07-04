@@ -2,7 +2,7 @@ from fastapi import APIRouter, FastAPI
 from scheduler import app as app_rocketry
 from fastapi.middleware.cors import CORSMiddleware
 from database import ConnectionDB
-from services import get_audio_ids_recommend_by_user_id
+from services import get_audio_ids_recommend_by_user_id, get_audio_similar_with_song_id
 
 app = FastAPI(
     title="Rocketry with FastAPI",
@@ -21,9 +21,14 @@ app.add_middleware(
 router_recommendation = APIRouter(tags=["recommendation"])
 
 
-@router_recommendation.get("/recommendation/")
+@router_recommendation.get("/recommendation/user/")
 async def get_recommendation_by_user_id(user_id):
     return get_audio_ids_recommend_by_user_id(user_id=user_id)
+
+
+@router_recommendation.get("/recommendation/audio/")
+async def get_recommendation_by_audio_id(audio_id):
+    return get_audio_similar_with_song_id(audio_id=audio_id)
 
 
 @router_recommendation.get("/force_train_model")

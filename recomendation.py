@@ -5,7 +5,7 @@ from scipy import sparse as sp
 from sklearn.metrics import pairwise as pw
 from popular_recomendation import popularity_recommender
 from lightfm import LightFM
-
+from fastapi import FastAPI, HTTPException
 
 sns.set()
 pd.set_option("display.max_columns", None)
@@ -40,7 +40,7 @@ def find_key_by_value(dictionary, value):
     for key, val in dictionary.items():
         if str(val) == str(value):
             return key
-    return None
+    raise HTTPException(status_code=404, detail="No data")
 
 
 def sample_recommendation_user(
@@ -53,33 +53,35 @@ def sample_recommendation_user(
     nrec_items=10,
     show=True,
 ):
-    print(interactions)
-    n_users, n_items = interactions.shape
-    user_x = find_key_by_value(user_dict, user_id)
-    if user_x is None:
-        return None
-    scores = pd.Series(model.predict(user_x, np.arange(n_items)))
-    scores.index = interactions.columns
-    scores = list(pd.Series(scores.sort_values(ascending=False).index))
-    known_items = list(
-        pd.Series(
-            interactions.loc[user_id, :][interactions.loc[user_id, :] > threshold].index
-        ).sort_values(ascending=False)
-    )
+    try:
+        n_users, n_items = interactions.shape
+        user_x = find_key_by_value(user_dict, user_id)
+        scores = pd.Series(model.predict(user_x, np.arange(n_items)))
+        scores.index = interactions.columns
+        scores = list(pd.Series(scores.sort_values(ascending=False).index))
+        known_items = list(
+            pd.Series(
+                interactions.loc[user_id, :][
+                    interactions.loc[user_id, :] > threshold
+                ].index
+            ).sort_values(ascending=False)
+        )
 
-    scores = [x for x in scores if x not in known_items]
-    return_score_list = scores[0:nrec_items]
-    known_items = list(pd.Series(known_items).apply(lambda x: item_dict[x]))
-    scores = list(pd.Series(return_score_list).apply(lambda x: item_dict[x]))
+        scores = [x for x in scores if x not in known_items]
+        return_score_list = scores[0:nrec_items]
+        known_items = list(pd.Series(known_items).apply(lambda x: item_dict[x]))
+        scores = list(pd.Series(return_score_list).apply(lambda x: item_dict[x]))
 
-    if show == True:
-        print("Recommended songs for UserID:", user_id)
-        counter = 1
-        for i in scores:
-            print(str(counter) + "- " + str(i))
-            counter += 1
-    print(return_score_list)
-    return return_score_list
+        if show == True:
+            print("Recommended songs for UserID:", user_id)
+            counter = 1
+            for i in scores:
+                print(str(counter) + "- " + str(i))
+                counter += 1
+
+        return return_score_list
+    except Exception as e:
+        raise HTTPException(status_code=404, detail="No data for this user")
 
 
 def create_item_emdedding_distance_matrix(model, interactions):
@@ -98,20 +100,20 @@ def item_item_recommendation(
 ):
     recommended_items = list(
         pd.Series(
-            item_emdedding_distance_matrix.loc[find_key_by_value(item_dict, item), :]
+            item_emdedding_distance_matrix.loc[find_key_by_value(item_dict, item_id), :]
             .sort_values(ascending=False)
             .head(n_items + 1)
             .index[1 : n_items + 1]
         )
     )
-
+    print(item_dict)
     if show == True:
-        print("Song of interest: {0}".format(item_dict[item_id]))
+        print("Song of interest: {0}".format(item_id))
         print("Song(s) similar to the above item are as follows:-")
         counter = 1
 
         for i in recommended_items:
-            print(str(counter) + ". " + item_dict[i])
+            print(str(counter) + ". " + str(i))
             counter += 1
 
     return recommended_items
