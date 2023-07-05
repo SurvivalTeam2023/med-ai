@@ -25,20 +25,6 @@ def create_user_dict(interactions):
     return new_dict
 
 
-def create_genre_dict(interactions):
-    genre_id = list(interactions.index)
-    genre_dist = {}
-    counter = 0
-
-    for i in genre_id:
-        genre_dist[i] = counter
-        counter += 1
-
-    new_genre = dict([(value, key) for key, value in genre_dist.items()])
-
-    return new_genre
-
-
 # Function to create an item dictionary based on their item_id and item name
 def create_item_dict(df, id_col, name_col):
     item_dict = {}
@@ -131,44 +117,3 @@ def item_item_recommendation(
             counter += 1
 
     return recommended_items
-
-
-def sample_recommendation_genre(
-    model,
-    interactions,
-    genre_id,
-    genre_dict,
-    item_dict,
-    threshold=0,
-    nrec_items=10,
-    show=True,
-):
-    try:
-        n_genres, n_items = interactions.shape
-        genre_x = find_key_by_value(genre_dict, genre_id)
-        scores = pd.Series(model.predict(genre_x, np.arange(n_items)))
-        scores.index = interactions.columns
-        scores = list(pd.Series(scores.sort_values(ascending=False).index))
-        known_items = list(
-            pd.Series(
-                interactions.loc[genre_id, :][
-                    interactions.loc[genre_id, :] > threshold
-                ].index
-            ).sort_values(ascending=False)
-        )
-
-        scores = [x for x in scores if x not in known_items]
-        return_score_list = scores[0:nrec_items]
-        known_items = list(pd.Series(known_items).apply(lambda x: item_dict[x]))
-        scores = list(pd.Series(return_score_list).apply(lambda x: item_dict[x]))
-
-        if show == True:
-            print("Recommended songs for GenreId:", genre_id)
-            counter = 1
-            for i in scores:
-                print(str(counter) + "- " + str(i))
-                counter += 1
-
-        return return_score_list
-    except Exception as e:
-        raise HTTPException(status_code=404, detail="No data for this genre")

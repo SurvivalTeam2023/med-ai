@@ -1,0 +1,77 @@
+name: CD
+on:
+  push:
+    branches:
+      - develop
+jobs:
+  Remove-Antifact:
+    name: Remove artifact
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clear useless artifacts
+        uses: c-hive/gha-remove-artifacts@v1.2.0
+        with:
+          age: '1 days'
+
+  Build-Deploy:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [16]
+    env:
+      NODE_ENV: "development"
+    name: Build and Deploy
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Login to Amazon ECR Public
+        id: login-ecr-public
+        uses: aws-actions/amazon-ecr-login@v1
+        with:
+          registry-type: public
+
+      - name: Get timestamp
+        uses: gerred/actions/current-time@master
+        id: current-time
+
+      - name: Run string replace
+        uses: frabert/replace-string-action@master
+        id: format-time
+        with:
+          pattern: '[:\.]+'
+          string: "${{ steps.current-time.outputs.time }}"
+          replace-with: '-'
+          flags: 'g'
+
+      - name: Build, tag, and push docker image to Amazon ECR Public
+        env:
+          REPOSITORY: ${{ secrets.REPOSITORY }}
+          IMAGE_TAG: "med-ai-${{ steps.format-time.outputs.replaced }}"
+        run: |
+          docker build -t $REPOSITORY:$IMAGE_TAG .
+          docker push $REPOSITORY:$IMAGE_TAG
+
+      - name: Executing remote ssh EC2
+        uses: appleboy/ssh-action@master
+        env:
+          REPOSITORY: ${{ secrets.REPOSITORY }}
+          IMAGE_TAG: "med-ai-${{ steps.format-time.outputs.replaced }}"
+          EKS_DEPLOYMENT: ${{ secrets.EKS_DEPLOYMENT }}
+          APP_NAME: ${{ secrets.APP_NAME }}
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          envs: REGISTRY, REGISTRY_ALIAS, REPOSITORY, IMAGE_TAG, EKS_DEPLOYMENT, APP_NAME
+          script: |
+              echo "$IMAGE_TAG"
+              kubectl set image deployment/$EKS_DEPLOYMENT $APP_NAME=$REPOSITORY:$IMAGE_TAG

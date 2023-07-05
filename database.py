@@ -57,7 +57,11 @@ class ConnectionDB:
         try:
             query = text(
                 """
-              
+                select a.id as audio_id ,a.name as audio_name, ag.genre_id, h.user_id, g.name as genre_name, h.count as audio_count
+                from history h
+                inner join audio a on a.id = h.audio_id
+                inner join audio_genre ag on ag.audio_id  = a.id
+                inner join genre g on ag.id = g.id
                 """
             )
             df = pd.read_sql(query, self.connection)
