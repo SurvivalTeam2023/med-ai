@@ -3,7 +3,7 @@ FROM python:3.9
 
 # Set the working directory in the container
 WORKDIR /app
-ENV PYTHONUNBUFFERED=0
+PYTHONUNBUFFERED=1
 # Copy the requirements file to the working directory
 COPY requirements.txt .
 
