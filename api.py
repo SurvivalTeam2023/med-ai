@@ -16,7 +16,11 @@ session = app_rocketry.session
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost", "http://localhost:3000"],
+    allow_origins=[
+        "http://172.27.0.1",
+        "http://172.27.0.1:8000",
+        "http://172.27.0.1:8082",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
