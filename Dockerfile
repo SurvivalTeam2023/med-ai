@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 8000
 
 # Command to start the application with Uvicorn
-CMD [ "python", "-u","main.py" ]
+CMD [ "python","main.py" ]
