@@ -7,7 +7,7 @@ import os
 class ConnectionDB:
     def __init__(self):
         engine = create_engine(
-            f'mysql+pymysql://{os.environ.get("DB_USER", "root")}:{os.environ.get("DB_PASSWORD", "JCpulWbTp5")}@{os.environ.get("DB_HOST", "14.225.204.74")}:3306/{os.environ.get("DB_DATABASE", "med-dump-ai")}'
+            f'mysql+pymysql://{os.environ.get("DB_USER", "root")}:{os.environ.get("DB_PASSWORD", "sX0thYwNEl")}@{os.environ.get("DB_HOST", "167.86.69.42")}:3306/{os.environ.get("DB_DATABASE", "dev_be")}'
         )
         self.connection = engine.connect()
         print("db_connected")

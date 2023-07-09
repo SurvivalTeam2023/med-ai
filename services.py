@@ -55,7 +55,7 @@ def get_audio_ids_recommend_by_user_id(user_id):
         sample_recommendation_user(
             model=hybrid_model,
             interactions=x,
-            user_id=int(user_id),
+            user_id=user_id,
             user_dict=user_dict,
             item_dict=song_dict,
             threshold=5,
