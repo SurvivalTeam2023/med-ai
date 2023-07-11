@@ -68,7 +68,7 @@ def get_audio_ids_recommend_by_user_id(user_id):
 def get_audio_similar_with_song_id(audio_id):
     data_model = load_model_latest_version(PREFIX_TRAIN_MUSIC_MODEL)
     raw_data = data_model.head(50000)
-    data = raw_data.groupby(["audi_name"]).agg({"count": "count"}).reset_index()
+    data = raw_data.groupby(["audio_name"]).agg({"count": "count"}).reset_index()
     data["percentage"] = raw_data["count"].div(raw_data["count"].sum()) * 100
     pop_model = popularity_recommender()
     pop_model.create(raw_data, "user_id", "audio_name")
