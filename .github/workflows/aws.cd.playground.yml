@@ -2,7 +2,7 @@ name: CD
 on:
   push:
     branches:
-      - develop
+      - playground
 jobs:
   Remove-Antifact:
     name: Remove artifact
@@ -74,4 +74,4 @@ jobs:
           envs: REGISTRY, REGISTRY_ALIAS, REPOSITORY, IMAGE_TAG, EKS_DEPLOYMENT, APP_NAME
           script: |
               echo "$IMAGE_TAG"
-              kubectl set image deployment/$EKS_DEPLOYMENT $APP_NAME=$REPOSITORY:$IMAGE_TAG -n dev
+              kubectl set image deployment/$EKS_DEPLOYMENT $APP_NAME=$REPOSITORY:$IMAGE_TAG -n playground
