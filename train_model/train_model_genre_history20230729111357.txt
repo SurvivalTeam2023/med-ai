@@ -1,0 +1,455 @@
+audio_id	audio_name	genre_id	user_id	genre_name	audio_count
+13	nhactest1	1	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Meditation	55
+13	nhactest1	1	67ccf3ac-3fef-44d4-921b-a6362884ee23	Meditation	42
+13	nhactest1	1	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Meditation	39
+13	nhactest1	1	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Meditation	88
+13	nhactest1	1	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Meditation	4
+13	nhactest1	1	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Meditation	48
+13	nhactest1	1	48e0ba21-dca9-4437-8bea-935371a8e178	Meditation	77
+13	nhactest1	1	fd705857-b301-44c9-b24c-496c8339ff70	Meditation	9
+13	nhactest1	1	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Meditation	84
+13	nhactest1	1	2fa26169-bc0f-411d-9b49-05a7feb14e35	Meditation	87
+13	nhactest1	1	48e0ba21-dca9-4437-8bea-935371a8e178	Meditation	95
+13	nhactest1	1	48e0ba21-dca9-4437-8bea-935371a8e178	Meditation	4
+13	nhactest1	1	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Meditation	1
+13	nhactest1	1	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Meditation	8
+13	nhactest1	1	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Meditation	46
+13	nhactest1	1	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Meditation	25
+13	nhactest1	1	32725917-b821-48d6-97c6-16b123b905bd	Meditation	48
+13	nhactest1	1	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Meditation	2
+13	nhactest1	1	fd705857-b301-44c9-b24c-496c8339ff70	Meditation	80
+13	nhactest1	1	32725917-b821-48d6-97c6-16b123b905bd	Meditation	82
+13	nhactest1	1	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Meditation	90
+13	nhactest1	1	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Meditation	39
+13	nhactest1	1	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Meditation	36
+13	nhactest1	1	67ccf3ac-3fef-44d4-921b-a6362884ee23	Meditation	91
+13	nhactest1	1	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Meditation	91
+13	nhactest1	1	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Meditation	29
+13	nhactest1	1	f80ccdf9-c952-408c-b94f-5b5e18addb31	Meditation	14
+13	nhactest1	1	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Meditation	1
+13	nhactest1	1	32725917-b821-48d6-97c6-16b123b905bd	Meditation	90
+13	nhactest1	1	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Meditation	86
+13	nhactest1	1	48e0ba21-dca9-4437-8bea-935371a8e178	Meditation	90
+13	nhactest1	1	fd705857-b301-44c9-b24c-496c8339ff70	Meditation	25
+13	nhactest1	1	48e0ba21-dca9-4437-8bea-935371a8e178	Meditation	43
+13	nhactest1	1	48e0ba21-dca9-4437-8bea-935371a8e178	Meditation	81
+13	nhactest1	1	48e0ba21-dca9-4437-8bea-935371a8e178	Meditation	84
+13	nhactest1	1	67ccf3ac-3fef-44d4-921b-a6362884ee23	Meditation	9
+13	nhactest1	1	67ccf3ac-3fef-44d4-921b-a6362884ee23	Meditation	53
+13	nhactest1	1	f80ccdf9-c952-408c-b94f-5b5e18addb31	Meditation	80
+13	nhactest1	1	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Meditation	83
+13	nhactest1	1	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Meditation	71
+13	nhactest1	1	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Meditation	53
+13	nhactest1	1	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Meditation	65
+13	nhactest1	1	f80ccdf9-c952-408c-b94f-5b5e18addb31	Meditation	53
+13	nhactest1	1	67ccf3ac-3fef-44d4-921b-a6362884ee23	Meditation	1
+13	nhactest1	1	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Meditation	6
+13	nhactest1	1	f80ccdf9-c952-408c-b94f-5b5e18addb31	Meditation	64
+14	nhactest2	1	67ccf3ac-3fef-44d4-921b-a6362884ee23	Instrumental	56
+14	nhactest2	1	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Instrumental	18
+14	nhactest2	1	32725917-b821-48d6-97c6-16b123b905bd	Instrumental	57
+14	nhactest2	1	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Instrumental	1
+14	nhactest2	1	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Instrumental	12
+14	nhactest2	1	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Instrumental	62
+14	nhactest2	1	fd705857-b301-44c9-b24c-496c8339ff70	Instrumental	33
+14	nhactest2	1	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Instrumental	14
+14	nhactest2	1	48e0ba21-dca9-4437-8bea-935371a8e178	Instrumental	90
+14	nhactest2	1	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Instrumental	97
+14	nhactest2	1	fd705857-b301-44c9-b24c-496c8339ff70	Instrumental	81
+14	nhactest2	1	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Instrumental	3
+14	nhactest2	1	2fa26169-bc0f-411d-9b49-05a7feb14e35	Instrumental	1
+14	nhactest2	1	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Instrumental	49
+14	nhactest2	1	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Instrumental	29
+14	nhactest2	1	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Instrumental	8
+14	nhactest2	1	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Instrumental	80
+14	nhactest2	1	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Instrumental	75
+14	nhactest2	1	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Instrumental	33
+14	nhactest2	1	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Instrumental	84
+14	nhactest2	1	48e0ba21-dca9-4437-8bea-935371a8e178	Instrumental	87
+14	nhactest2	1	f80ccdf9-c952-408c-b94f-5b5e18addb31	Instrumental	30
+14	nhactest2	1	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Instrumental	32
+14	nhactest2	1	fd705857-b301-44c9-b24c-496c8339ff70	Instrumental	29
+14	nhactest2	1	67ccf3ac-3fef-44d4-921b-a6362884ee23	Instrumental	63
+14	nhactest2	1	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Instrumental	18
+14	nhactest2	1	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Instrumental	59
+14	nhactest2	1	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Instrumental	66
+14	nhactest2	1	67ccf3ac-3fef-44d4-921b-a6362884ee23	Instrumental	30
+14	nhactest2	1	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Instrumental	50
+14	nhactest2	1	67ccf3ac-3fef-44d4-921b-a6362884ee23	Instrumental	24
+14	nhactest2	1	fd705857-b301-44c9-b24c-496c8339ff70	Instrumental	13
+14	nhactest2	1	fd705857-b301-44c9-b24c-496c8339ff70	Instrumental	13
+14	nhactest2	1	67ccf3ac-3fef-44d4-921b-a6362884ee23	Instrumental	22
+14	nhactest2	1	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Instrumental	19
+14	nhactest2	1	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Instrumental	53
+14	nhactest2	1	48e0ba21-dca9-4437-8bea-935371a8e178	Instrumental	67
+14	nhactest2	1	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Instrumental	17
+14	nhactest2	1	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Instrumental	48
+14	nhactest2	1	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Instrumental	28
+14	nhactest2	1	67ccf3ac-3fef-44d4-921b-a6362884ee23	Instrumental	89
+14	nhactest2	1	67ccf3ac-3fef-44d4-921b-a6362884ee23	Instrumental	54
+14	nhactest2	1	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Instrumental	71
+14	nhactest2	1	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Instrumental	87
+14	nhactest2	1	f80ccdf9-c952-408c-b94f-5b5e18addb31	Instrumental	72
+14	nhactest2	1	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Instrumental	13
+23	Có Khi Nào Rời Xa	2	2fa26169-bc0f-411d-9b49-05a7feb14e35	Ambient	87
+23	Có Khi Nào Rời Xa	2	32725917-b821-48d6-97c6-16b123b905bd	Ambient	50
+23	Có Khi Nào Rời Xa	2	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Ambient	76
+23	Có Khi Nào Rời Xa	2	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Ambient	42
+23	Có Khi Nào Rời Xa	2	f80ccdf9-c952-408c-b94f-5b5e18addb31	Ambient	5
+23	Có Khi Nào Rời Xa	2	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Ambient	89
+23	Có Khi Nào Rời Xa	2	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Ambient	43
+23	Có Khi Nào Rời Xa	2	fd705857-b301-44c9-b24c-496c8339ff70	Ambient	77
+23	Có Khi Nào Rời Xa	2	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Ambient	81
+23	Có Khi Nào Rời Xa	2	f80ccdf9-c952-408c-b94f-5b5e18addb31	Ambient	21
+23	Có Khi Nào Rời Xa	2	32725917-b821-48d6-97c6-16b123b905bd	Ambient	99
+23	Có Khi Nào Rời Xa	2	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Ambient	9
+23	Có Khi Nào Rời Xa	2	32725917-b821-48d6-97c6-16b123b905bd	Ambient	96
+23	Có Khi Nào Rời Xa	2	32725917-b821-48d6-97c6-16b123b905bd	Ambient	50
+23	Có Khi Nào Rời Xa	2	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Ambient	37
+23	Có Khi Nào Rời Xa	2	67ccf3ac-3fef-44d4-921b-a6362884ee23	Ambient	98
+23	Có Khi Nào Rời Xa	2	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Ambient	18
+23	Có Khi Nào Rời Xa	2	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Ambient	12
+23	Có Khi Nào Rời Xa	2	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Ambient	87
+23	Có Khi Nào Rời Xa	2	2fa26169-bc0f-411d-9b49-05a7feb14e35	Ambient	76
+23	Có Khi Nào Rời Xa	2	f80ccdf9-c952-408c-b94f-5b5e18addb31	Ambient	53
+23	Có Khi Nào Rời Xa	2	f80ccdf9-c952-408c-b94f-5b5e18addb31	Ambient	3
+23	Có Khi Nào Rời Xa	2	67ccf3ac-3fef-44d4-921b-a6362884ee23	Ambient	96
+23	Có Khi Nào Rời Xa	2	fd705857-b301-44c9-b24c-496c8339ff70	Ambient	34
+23	Có Khi Nào Rời Xa	2	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Ambient	89
+23	Có Khi Nào Rời Xa	2	f80ccdf9-c952-408c-b94f-5b5e18addb31	Ambient	6
+23	Có Khi Nào Rời Xa	2	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Ambient	43
+23	Có Khi Nào Rời Xa	2	67ccf3ac-3fef-44d4-921b-a6362884ee23	Ambient	9
+23	Có Khi Nào Rời Xa	2	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Ambient	76
+23	Có Khi Nào Rời Xa	2	67ccf3ac-3fef-44d4-921b-a6362884ee23	Ambient	34
+23	Có Khi Nào Rời Xa	2	67ccf3ac-3fef-44d4-921b-a6362884ee23	Ambient	2
+23	Có Khi Nào Rời Xa	2	f80ccdf9-c952-408c-b94f-5b5e18addb31	Ambient	42
+23	Có Khi Nào Rời Xa	2	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Ambient	98
+23	Có Khi Nào Rời Xa	2	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Ambient	5
+23	Có Khi Nào Rời Xa	2	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Ambient	42
+23	Có Khi Nào Rời Xa	2	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Ambient	4
+23	Có Khi Nào Rời Xa	2	48e0ba21-dca9-4437-8bea-935371a8e178	Ambient	51
+23	Có Khi Nào Rời Xa	2	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Ambient	26
+23	Có Khi Nào Rời Xa	2	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Ambient	61
+23	Có Khi Nào Rời Xa	2	67ccf3ac-3fef-44d4-921b-a6362884ee23	Ambient	17
+23	Có Khi Nào Rời Xa	2	67ccf3ac-3fef-44d4-921b-a6362884ee23	Ambient	1
+23	Có Khi Nào Rời Xa	2	fd705857-b301-44c9-b24c-496c8339ff70	Ambient	10
+23	Có Khi Nào Rời Xa	2	48e0ba21-dca9-4437-8bea-935371a8e178	Ambient	94
+23	Có Khi Nào Rời Xa	2	67ccf3ac-3fef-44d4-921b-a6362884ee23	Ambient	99
+23	Có Khi Nào Rời Xa	2	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Ambient	23
+59	Thằng Điên	4	48e0ba21-dca9-4437-8bea-935371a8e178	Classical	4
+59	Thằng Điên	4	32725917-b821-48d6-97c6-16b123b905bd	Classical	18
+59	Thằng Điên	4	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Classical	39
+59	Thằng Điên	4	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Classical	54
+59	Thằng Điên	4	67ccf3ac-3fef-44d4-921b-a6362884ee23	Classical	2
+59	Thằng Điên	4	2fa26169-bc0f-411d-9b49-05a7feb14e35	Classical	64
+59	Thằng Điên	4	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Classical	6
+59	Thằng Điên	4	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Classical	13
+59	Thằng Điên	4	32725917-b821-48d6-97c6-16b123b905bd	Classical	64
+59	Thằng Điên	4	f80ccdf9-c952-408c-b94f-5b5e18addb31	Classical	49
+59	Thằng Điên	4	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Classical	39
+59	Thằng Điên	4	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Classical	46
+59	Thằng Điên	4	32725917-b821-48d6-97c6-16b123b905bd	Classical	7
+59	Thằng Điên	4	2fa26169-bc0f-411d-9b49-05a7feb14e35	Classical	74
+59	Thằng Điên	4	f80ccdf9-c952-408c-b94f-5b5e18addb31	Classical	48
+59	Thằng Điên	4	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Classical	73
+59	Thằng Điên	4	fd705857-b301-44c9-b24c-496c8339ff70	Classical	32
+59	Thằng Điên	4	32725917-b821-48d6-97c6-16b123b905bd	Classical	53
+59	Thằng Điên	4	48e0ba21-dca9-4437-8bea-935371a8e178	Classical	73
+59	Thằng Điên	4	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Classical	66
+59	Thằng Điên	4	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Classical	16
+59	Thằng Điên	4	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Classical	62
+59	Thằng Điên	4	32725917-b821-48d6-97c6-16b123b905bd	Classical	49
+59	Thằng Điên	4	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Classical	87
+59	Thằng Điên	4	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Classical	95
+59	Thằng Điên	4	fd705857-b301-44c9-b24c-496c8339ff70	Classical	33
+59	Thằng Điên	4	fd705857-b301-44c9-b24c-496c8339ff70	Classical	37
+59	Thằng Điên	4	fd705857-b301-44c9-b24c-496c8339ff70	Classical	18
+59	Thằng Điên	4	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Classical	11
+59	Thằng Điên	4	67ccf3ac-3fef-44d4-921b-a6362884ee23	Classical	1
+59	Thằng Điên	4	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Classical	21
+59	Thằng Điên	4	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Classical	21
+59	Thằng Điên	4	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Classical	95
+59	Thằng Điên	4	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Classical	85
+59	Thằng Điên	4	32725917-b821-48d6-97c6-16b123b905bd	Classical	74
+59	Thằng Điên	4	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Classical	62
+59	Thằng Điên	4	f80ccdf9-c952-408c-b94f-5b5e18addb31	Classical	25
+59	Thằng Điên	4	32725917-b821-48d6-97c6-16b123b905bd	Classical	36
+59	Thằng Điên	4	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Classical	22
+59	Thằng Điên	4	32725917-b821-48d6-97c6-16b123b905bd	Classical	71
+59	Thằng Điên	4	fd705857-b301-44c9-b24c-496c8339ff70	Classical	8
+59	Thằng Điên	4	48e0ba21-dca9-4437-8bea-935371a8e178	Classical	28
+59	Thằng Điên	4	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Classical	12
+59	Thằng Điên	4	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Classical	31
+59	Thằng Điên	4	67ccf3ac-3fef-44d4-921b-a6362884ee23	Classical	16
+59	Thằng Điên	4	fd705857-b301-44c9-b24c-496c8339ff70	Classical	89
+37	Từ Chối Nhẹ Nhàng Thôi	1	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Nature sounds	27
+37	Từ Chối Nhẹ Nhàng Thôi	1	67ccf3ac-3fef-44d4-921b-a6362884ee23	Nature sounds	14
+37	Từ Chối Nhẹ Nhàng Thôi	1	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Nature sounds	61
+37	Từ Chối Nhẹ Nhàng Thôi	1	48e0ba21-dca9-4437-8bea-935371a8e178	Nature sounds	30
+37	Từ Chối Nhẹ Nhàng Thôi	1	f80ccdf9-c952-408c-b94f-5b5e18addb31	Nature sounds	37
+37	Từ Chối Nhẹ Nhàng Thôi	1	f80ccdf9-c952-408c-b94f-5b5e18addb31	Nature sounds	7
+37	Từ Chối Nhẹ Nhàng Thôi	1	fd705857-b301-44c9-b24c-496c8339ff70	Nature sounds	58
+37	Từ Chối Nhẹ Nhàng Thôi	1	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Nature sounds	60
+37	Từ Chối Nhẹ Nhàng Thôi	1	32725917-b821-48d6-97c6-16b123b905bd	Nature sounds	83
+37	Từ Chối Nhẹ Nhàng Thôi	1	48e0ba21-dca9-4437-8bea-935371a8e178	Nature sounds	6
+37	Từ Chối Nhẹ Nhàng Thôi	1	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Nature sounds	24
+37	Từ Chối Nhẹ Nhàng Thôi	1	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Nature sounds	72
+37	Từ Chối Nhẹ Nhàng Thôi	1	32725917-b821-48d6-97c6-16b123b905bd	Nature sounds	48
+37	Từ Chối Nhẹ Nhàng Thôi	1	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Nature sounds	88
+37	Từ Chối Nhẹ Nhàng Thôi	1	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Nature sounds	51
+37	Từ Chối Nhẹ Nhàng Thôi	1	32725917-b821-48d6-97c6-16b123b905bd	Nature sounds	13
+37	Từ Chối Nhẹ Nhàng Thôi	1	67ccf3ac-3fef-44d4-921b-a6362884ee23	Nature sounds	4
+37	Từ Chối Nhẹ Nhàng Thôi	1	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Nature sounds	68
+37	Từ Chối Nhẹ Nhàng Thôi	1	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Nature sounds	1
+37	Từ Chối Nhẹ Nhàng Thôi	1	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Nature sounds	51
+37	Từ Chối Nhẹ Nhàng Thôi	1	67ccf3ac-3fef-44d4-921b-a6362884ee23	Nature sounds	55
+37	Từ Chối Nhẹ Nhàng Thôi	1	f80ccdf9-c952-408c-b94f-5b5e18addb31	Nature sounds	32
+37	Từ Chối Nhẹ Nhàng Thôi	1	48e0ba21-dca9-4437-8bea-935371a8e178	Nature sounds	70
+37	Từ Chối Nhẹ Nhàng Thôi	1	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Nature sounds	28
+37	Từ Chối Nhẹ Nhàng Thôi	1	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Nature sounds	69
+37	Từ Chối Nhẹ Nhàng Thôi	1	32725917-b821-48d6-97c6-16b123b905bd	Nature sounds	82
+37	Từ Chối Nhẹ Nhàng Thôi	1	f80ccdf9-c952-408c-b94f-5b5e18addb31	Nature sounds	77
+37	Từ Chối Nhẹ Nhàng Thôi	1	32725917-b821-48d6-97c6-16b123b905bd	Nature sounds	83
+37	Từ Chối Nhẹ Nhàng Thôi	1	f80ccdf9-c952-408c-b94f-5b5e18addb31	Nature sounds	76
+37	Từ Chối Nhẹ Nhàng Thôi	1	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Nature sounds	24
+37	Từ Chối Nhẹ Nhàng Thôi	1	67ccf3ac-3fef-44d4-921b-a6362884ee23	Nature sounds	68
+37	Từ Chối Nhẹ Nhàng Thôi	1	2fa26169-bc0f-411d-9b49-05a7feb14e35	Nature sounds	97
+37	Từ Chối Nhẹ Nhàng Thôi	1	f80ccdf9-c952-408c-b94f-5b5e18addb31	Nature sounds	2
+37	Từ Chối Nhẹ Nhàng Thôi	1	67ccf3ac-3fef-44d4-921b-a6362884ee23	Nature sounds	65
+37	Từ Chối Nhẹ Nhàng Thôi	1	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Nature sounds	80
+37	Từ Chối Nhẹ Nhàng Thôi	1	fd705857-b301-44c9-b24c-496c8339ff70	Nature sounds	62
+37	Từ Chối Nhẹ Nhàng Thôi	1	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Nature sounds	19
+37	Từ Chối Nhẹ Nhàng Thôi	1	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Nature sounds	100
+37	Từ Chối Nhẹ Nhàng Thôi	1	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Nature sounds	10
+37	Từ Chối Nhẹ Nhàng Thôi	1	32725917-b821-48d6-97c6-16b123b905bd	Nature sounds	6
+37	Từ Chối Nhẹ Nhàng Thôi	1	32725917-b821-48d6-97c6-16b123b905bd	Nature sounds	80
+37	Từ Chối Nhẹ Nhàng Thôi	1	2fa26169-bc0f-411d-9b49-05a7feb14e35	Nature sounds	98
+37	Từ Chối Nhẹ Nhàng Thôi	1	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Nature sounds	28
+37	Từ Chối Nhẹ Nhàng Thôi	1	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Nature sounds	42
+37	Từ Chối Nhẹ Nhàng Thôi	1	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Nature sounds	60
+54	Waiting For You	3	f80ccdf9-c952-408c-b94f-5b5e18addb31	Chill out	62
+54	Waiting For You	3	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Chill out	76
+54	Waiting For You	3	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Chill out	69
+54	Waiting For You	3	67ccf3ac-3fef-44d4-921b-a6362884ee23	Chill out	31
+54	Waiting For You	3	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Chill out	11
+54	Waiting For You	3	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Chill out	39
+54	Waiting For You	3	67ccf3ac-3fef-44d4-921b-a6362884ee23	Chill out	94
+54	Waiting For You	3	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Chill out	29
+54	Waiting For You	3	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Chill out	70
+54	Waiting For You	3	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Chill out	78
+54	Waiting For You	3	fd705857-b301-44c9-b24c-496c8339ff70	Chill out	15
+54	Waiting For You	3	32725917-b821-48d6-97c6-16b123b905bd	Chill out	45
+54	Waiting For You	3	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Chill out	76
+54	Waiting For You	3	32725917-b821-48d6-97c6-16b123b905bd	Chill out	6
+54	Waiting For You	3	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Chill out	66
+54	Waiting For You	3	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Chill out	68
+54	Waiting For You	3	2fa26169-bc0f-411d-9b49-05a7feb14e35	Chill out	92
+54	Waiting For You	3	fd705857-b301-44c9-b24c-496c8339ff70	Chill out	74
+54	Waiting For You	3	32725917-b821-48d6-97c6-16b123b905bd	Chill out	97
+54	Waiting For You	3	f80ccdf9-c952-408c-b94f-5b5e18addb31	Chill out	27
+54	Waiting For You	3	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Chill out	8
+54	Waiting For You	3	32725917-b821-48d6-97c6-16b123b905bd	Chill out	15
+54	Waiting For You	3	67ccf3ac-3fef-44d4-921b-a6362884ee23	Chill out	92
+54	Waiting For You	3	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Chill out	16
+54	Waiting For You	3	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Chill out	43
+54	Waiting For You	3	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Chill out	16
+54	Waiting For You	3	67ccf3ac-3fef-44d4-921b-a6362884ee23	Chill out	98
+54	Waiting For You	3	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Chill out	37
+54	Waiting For You	3	f80ccdf9-c952-408c-b94f-5b5e18addb31	Chill out	69
+54	Waiting For You	3	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Chill out	63
+54	Waiting For You	3	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Chill out	94
+54	Waiting For You	3	f80ccdf9-c952-408c-b94f-5b5e18addb31	Chill out	26
+54	Waiting For You	3	48e0ba21-dca9-4437-8bea-935371a8e178	Chill out	91
+54	Waiting For You	3	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Chill out	41
+54	Waiting For You	3	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Chill out	21
+54	Waiting For You	3	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Chill out	8
+54	Waiting For You	3	2fa26169-bc0f-411d-9b49-05a7feb14e35	Chill out	5
+54	Waiting For You	3	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Chill out	52
+54	Waiting For You	3	32725917-b821-48d6-97c6-16b123b905bd	Chill out	24
+54	Waiting For You	3	48e0ba21-dca9-4437-8bea-935371a8e178	Chill out	70
+54	Waiting For You	3	32725917-b821-48d6-97c6-16b123b905bd	Chill out	35
+54	Waiting For You	3	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Chill out	96
+54	Waiting For You	3	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Chill out	88
+54	Waiting For You	3	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Chill out	6
+54	Waiting For You	3	67ccf3ac-3fef-44d4-921b-a6362884ee23	Chill out	35
+54	Waiting For You	3	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Chill out	65
+27	Mình Yêu Nhau Đi	6	f80ccdf9-c952-408c-b94f-5b5e18addb31	White noise	73
+27	Mình Yêu Nhau Đi	6	f80ccdf9-c952-408c-b94f-5b5e18addb31	White noise	24
+27	Mình Yêu Nhau Đi	6	2fa26169-bc0f-411d-9b49-05a7feb14e35	White noise	86
+27	Mình Yêu Nhau Đi	6	fd705857-b301-44c9-b24c-496c8339ff70	White noise	52
+27	Mình Yêu Nhau Đi	6	2fa26169-bc0f-411d-9b49-05a7feb14e35	White noise	23
+27	Mình Yêu Nhau Đi	6	67ccf3ac-3fef-44d4-921b-a6362884ee23	White noise	60
+27	Mình Yêu Nhau Đi	6	f80ccdf9-c952-408c-b94f-5b5e18addb31	White noise	81
+27	Mình Yêu Nhau Đi	6	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	White noise	98
+27	Mình Yêu Nhau Đi	6	fd705857-b301-44c9-b24c-496c8339ff70	White noise	13
+27	Mình Yêu Nhau Đi	6	2fa26169-bc0f-411d-9b49-05a7feb14e35	White noise	27
+27	Mình Yêu Nhau Đi	6	67ccf3ac-3fef-44d4-921b-a6362884ee23	White noise	71
+27	Mình Yêu Nhau Đi	6	2fa26169-bc0f-411d-9b49-05a7feb14e35	White noise	91
+27	Mình Yêu Nhau Đi	6	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	White noise	8
+27	Mình Yêu Nhau Đi	6	fbe1519f-caf6-488b-bc3b-86eaad4534ad	White noise	10
+27	Mình Yêu Nhau Đi	6	2fa26169-bc0f-411d-9b49-05a7feb14e35	White noise	51
+27	Mình Yêu Nhau Đi	6	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	White noise	13
+27	Mình Yêu Nhau Đi	6	fd705857-b301-44c9-b24c-496c8339ff70	White noise	80
+27	Mình Yêu Nhau Đi	6	fd705857-b301-44c9-b24c-496c8339ff70	White noise	2
+27	Mình Yêu Nhau Đi	6	a582937b-f5a4-45cb-be6a-51ee41bcdc84	White noise	91
+27	Mình Yêu Nhau Đi	6	48e0ba21-dca9-4437-8bea-935371a8e178	White noise	59
+27	Mình Yêu Nhau Đi	6	7b6f8e1f-af45-47c7-8ea2-575a6165904f	White noise	36
+27	Mình Yêu Nhau Đi	6	32725917-b821-48d6-97c6-16b123b905bd	White noise	65
+27	Mình Yêu Nhau Đi	6	fd705857-b301-44c9-b24c-496c8339ff70	White noise	1
+27	Mình Yêu Nhau Đi	6	48e0ba21-dca9-4437-8bea-935371a8e178	White noise	3
+27	Mình Yêu Nhau Đi	6	fd705857-b301-44c9-b24c-496c8339ff70	White noise	16
+27	Mình Yêu Nhau Đi	6	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	White noise	21
+27	Mình Yêu Nhau Đi	6	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	White noise	13
+27	Mình Yêu Nhau Đi	6	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	White noise	59
+27	Mình Yêu Nhau Đi	6	fd705857-b301-44c9-b24c-496c8339ff70	White noise	87
+27	Mình Yêu Nhau Đi	6	2fa26169-bc0f-411d-9b49-05a7feb14e35	White noise	3
+27	Mình Yêu Nhau Đi	6	2fa26169-bc0f-411d-9b49-05a7feb14e35	White noise	37
+27	Mình Yêu Nhau Đi	6	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	White noise	28
+27	Mình Yêu Nhau Đi	6	48e0ba21-dca9-4437-8bea-935371a8e178	White noise	83
+27	Mình Yêu Nhau Đi	6	7b6f8e1f-af45-47c7-8ea2-575a6165904f	White noise	45
+27	Mình Yêu Nhau Đi	6	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	White noise	32
+27	Mình Yêu Nhau Đi	6	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	White noise	99
+27	Mình Yêu Nhau Đi	6	32725917-b821-48d6-97c6-16b123b905bd	White noise	32
+27	Mình Yêu Nhau Đi	6	2fa26169-bc0f-411d-9b49-05a7feb14e35	White noise	24
+27	Mình Yêu Nhau Đi	6	f80ccdf9-c952-408c-b94f-5b5e18addb31	White noise	99
+27	Mình Yêu Nhau Đi	6	2fa26169-bc0f-411d-9b49-05a7feb14e35	White noise	56
+27	Mình Yêu Nhau Đi	6	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	White noise	69
+27	Mình Yêu Nhau Đi	6	fd705857-b301-44c9-b24c-496c8339ff70	White noise	92
+27	Mình Yêu Nhau Đi	6	67ccf3ac-3fef-44d4-921b-a6362884ee23	White noise	94
+27	Mình Yêu Nhau Đi	6	2fa26169-bc0f-411d-9b49-05a7feb14e35	White noise	80
+27	Mình Yêu Nhau Đi	6	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	White noise	11
+23	Có Khi Nào Rời Xa	2	2fa26169-bc0f-411d-9b49-05a7feb14e35	Pop	87
+23	Có Khi Nào Rời Xa	2	32725917-b821-48d6-97c6-16b123b905bd	Pop	50
+23	Có Khi Nào Rời Xa	2	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Pop	76
+23	Có Khi Nào Rời Xa	2	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Pop	42
+23	Có Khi Nào Rời Xa	2	f80ccdf9-c952-408c-b94f-5b5e18addb31	Pop	5
+23	Có Khi Nào Rời Xa	2	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Pop	89
+23	Có Khi Nào Rời Xa	2	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Pop	43
+23	Có Khi Nào Rời Xa	2	fd705857-b301-44c9-b24c-496c8339ff70	Pop	77
+23	Có Khi Nào Rời Xa	2	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Pop	81
+23	Có Khi Nào Rời Xa	2	f80ccdf9-c952-408c-b94f-5b5e18addb31	Pop	21
+23	Có Khi Nào Rời Xa	2	32725917-b821-48d6-97c6-16b123b905bd	Pop	99
+23	Có Khi Nào Rời Xa	2	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Pop	9
+23	Có Khi Nào Rời Xa	2	32725917-b821-48d6-97c6-16b123b905bd	Pop	96
+23	Có Khi Nào Rời Xa	2	32725917-b821-48d6-97c6-16b123b905bd	Pop	50
+23	Có Khi Nào Rời Xa	2	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Pop	37
+23	Có Khi Nào Rời Xa	2	67ccf3ac-3fef-44d4-921b-a6362884ee23	Pop	98
+23	Có Khi Nào Rời Xa	2	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Pop	18
+23	Có Khi Nào Rời Xa	2	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Pop	12
+23	Có Khi Nào Rời Xa	2	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Pop	87
+23	Có Khi Nào Rời Xa	2	2fa26169-bc0f-411d-9b49-05a7feb14e35	Pop	76
+23	Có Khi Nào Rời Xa	2	f80ccdf9-c952-408c-b94f-5b5e18addb31	Pop	53
+23	Có Khi Nào Rời Xa	2	f80ccdf9-c952-408c-b94f-5b5e18addb31	Pop	3
+23	Có Khi Nào Rời Xa	2	67ccf3ac-3fef-44d4-921b-a6362884ee23	Pop	96
+23	Có Khi Nào Rời Xa	2	fd705857-b301-44c9-b24c-496c8339ff70	Pop	34
+23	Có Khi Nào Rời Xa	2	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Pop	89
+23	Có Khi Nào Rời Xa	2	f80ccdf9-c952-408c-b94f-5b5e18addb31	Pop	6
+23	Có Khi Nào Rời Xa	2	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Pop	43
+23	Có Khi Nào Rời Xa	2	67ccf3ac-3fef-44d4-921b-a6362884ee23	Pop	9
+23	Có Khi Nào Rời Xa	2	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Pop	76
+23	Có Khi Nào Rời Xa	2	67ccf3ac-3fef-44d4-921b-a6362884ee23	Pop	34
+23	Có Khi Nào Rời Xa	2	67ccf3ac-3fef-44d4-921b-a6362884ee23	Pop	2
+23	Có Khi Nào Rời Xa	2	f80ccdf9-c952-408c-b94f-5b5e18addb31	Pop	42
+23	Có Khi Nào Rời Xa	2	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Pop	98
+23	Có Khi Nào Rời Xa	2	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Pop	5
+23	Có Khi Nào Rời Xa	2	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Pop	42
+23	Có Khi Nào Rời Xa	2	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Pop	4
+23	Có Khi Nào Rời Xa	2	48e0ba21-dca9-4437-8bea-935371a8e178	Pop	51
+23	Có Khi Nào Rời Xa	2	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Pop	26
+23	Có Khi Nào Rời Xa	2	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Pop	61
+23	Có Khi Nào Rời Xa	2	67ccf3ac-3fef-44d4-921b-a6362884ee23	Pop	17
+23	Có Khi Nào Rời Xa	2	67ccf3ac-3fef-44d4-921b-a6362884ee23	Pop	1
+23	Có Khi Nào Rời Xa	2	fd705857-b301-44c9-b24c-496c8339ff70	Pop	10
+23	Có Khi Nào Rời Xa	2	48e0ba21-dca9-4437-8bea-935371a8e178	Pop	94
+23	Có Khi Nào Rời Xa	2	67ccf3ac-3fef-44d4-921b-a6362884ee23	Pop	99
+23	Có Khi Nào Rời Xa	2	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Pop	23
+21	Chú Mèo	5	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Traditional	37
+21	Chú Mèo	5	48e0ba21-dca9-4437-8bea-935371a8e178	Traditional	25
+21	Chú Mèo	5	32725917-b821-48d6-97c6-16b123b905bd	Traditional	8
+21	Chú Mèo	5	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Traditional	75
+21	Chú Mèo	5	67ccf3ac-3fef-44d4-921b-a6362884ee23	Traditional	11
+21	Chú Mèo	5	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Traditional	86
+21	Chú Mèo	5	48e0ba21-dca9-4437-8bea-935371a8e178	Traditional	85
+21	Chú Mèo	5	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Traditional	68
+21	Chú Mèo	5	67ccf3ac-3fef-44d4-921b-a6362884ee23	Traditional	1
+21	Chú Mèo	5	f80ccdf9-c952-408c-b94f-5b5e18addb31	Traditional	67
+21	Chú Mèo	5	f80ccdf9-c952-408c-b94f-5b5e18addb31	Traditional	53
+21	Chú Mèo	5	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Traditional	60
+21	Chú Mèo	5	67ccf3ac-3fef-44d4-921b-a6362884ee23	Traditional	38
+21	Chú Mèo	5	48e0ba21-dca9-4437-8bea-935371a8e178	Traditional	75
+21	Chú Mèo	5	f80ccdf9-c952-408c-b94f-5b5e18addb31	Traditional	20
+21	Chú Mèo	5	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Traditional	79
+21	Chú Mèo	5	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Traditional	17
+21	Chú Mèo	5	48e0ba21-dca9-4437-8bea-935371a8e178	Traditional	86
+21	Chú Mèo	5	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Traditional	21
+21	Chú Mèo	5	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Traditional	90
+21	Chú Mèo	5	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Traditional	38
+21	Chú Mèo	5	2fa26169-bc0f-411d-9b49-05a7feb14e35	Traditional	27
+21	Chú Mèo	5	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Traditional	58
+21	Chú Mèo	5	f80ccdf9-c952-408c-b94f-5b5e18addb31	Traditional	1
+21	Chú Mèo	5	fd705857-b301-44c9-b24c-496c8339ff70	Traditional	13
+21	Chú Mèo	5	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Traditional	80
+21	Chú Mèo	5	2fa26169-bc0f-411d-9b49-05a7feb14e35	Traditional	35
+21	Chú Mèo	5	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Traditional	8
+21	Chú Mèo	5	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Traditional	73
+21	Chú Mèo	5	f80ccdf9-c952-408c-b94f-5b5e18addb31	Traditional	48
+21	Chú Mèo	5	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Traditional	67
+21	Chú Mèo	5	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Traditional	69
+21	Chú Mèo	5	32725917-b821-48d6-97c6-16b123b905bd	Traditional	52
+21	Chú Mèo	5	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Traditional	88
+21	Chú Mèo	5	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Traditional	1
+21	Chú Mèo	5	2fa26169-bc0f-411d-9b49-05a7feb14e35	Traditional	69
+21	Chú Mèo	5	48e0ba21-dca9-4437-8bea-935371a8e178	Traditional	36
+21	Chú Mèo	5	2fa26169-bc0f-411d-9b49-05a7feb14e35	Traditional	46
+21	Chú Mèo	5	67ccf3ac-3fef-44d4-921b-a6362884ee23	Traditional	16
+21	Chú Mèo	5	32725917-b821-48d6-97c6-16b123b905bd	Traditional	69
+21	Chú Mèo	5	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Traditional	63
+21	Chú Mèo	5	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Traditional	58
+21	Chú Mèo	5	32725917-b821-48d6-97c6-16b123b905bd	Traditional	99
+21	Chú Mèo	5	48e0ba21-dca9-4437-8bea-935371a8e178	Traditional	2
+21	Chú Mèo	5	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Traditional	79
+45	Con Trai Cưng	1	48e0ba21-dca9-4437-8bea-935371a8e178	Binaural tones	57
+45	Con Trai Cưng	1	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Binaural tones	91
+45	Con Trai Cưng	1	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Binaural tones	9
+45	Con Trai Cưng	1	2fa26169-bc0f-411d-9b49-05a7feb14e35	Binaural tones	83
+45	Con Trai Cưng	1	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Binaural tones	44
+45	Con Trai Cưng	1	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Binaural tones	72
+45	Con Trai Cưng	1	32725917-b821-48d6-97c6-16b123b905bd	Binaural tones	14
+45	Con Trai Cưng	1	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Binaural tones	16
+45	Con Trai Cưng	1	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Binaural tones	7
+45	Con Trai Cưng	1	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Binaural tones	42
+45	Con Trai Cưng	1	2fa26169-bc0f-411d-9b49-05a7feb14e35	Binaural tones	88
+45	Con Trai Cưng	1	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Binaural tones	13
+45	Con Trai Cưng	1	2fa26169-bc0f-411d-9b49-05a7feb14e35	Binaural tones	58
+45	Con Trai Cưng	1	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Binaural tones	83
+45	Con Trai Cưng	1	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Binaural tones	9
+45	Con Trai Cưng	1	2fa26169-bc0f-411d-9b49-05a7feb14e35	Binaural tones	86
+45	Con Trai Cưng	1	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Binaural tones	11
+45	Con Trai Cưng	1	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Binaural tones	35
+45	Con Trai Cưng	1	f80ccdf9-c952-408c-b94f-5b5e18addb31	Binaural tones	70
+45	Con Trai Cưng	1	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Binaural tones	93
+45	Con Trai Cưng	1	48e0ba21-dca9-4437-8bea-935371a8e178	Binaural tones	69
+45	Con Trai Cưng	1	48e0ba21-dca9-4437-8bea-935371a8e178	Binaural tones	74
+45	Con Trai Cưng	1	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Binaural tones	84
+45	Con Trai Cưng	1	32725917-b821-48d6-97c6-16b123b905bd	Binaural tones	9
+45	Con Trai Cưng	1	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Binaural tones	50
+45	Con Trai Cưng	1	67ccf3ac-3fef-44d4-921b-a6362884ee23	Binaural tones	46
+45	Con Trai Cưng	1	f80ccdf9-c952-408c-b94f-5b5e18addb31	Binaural tones	88
+45	Con Trai Cưng	1	67ccf3ac-3fef-44d4-921b-a6362884ee23	Binaural tones	14
+45	Con Trai Cưng	1	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Binaural tones	87
+45	Con Trai Cưng	1	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Binaural tones	77
+45	Con Trai Cưng	1	a582937b-f5a4-45cb-be6a-51ee41bcdc84	Binaural tones	9
+45	Con Trai Cưng	1	fd705857-b301-44c9-b24c-496c8339ff70	Binaural tones	4
+45	Con Trai Cưng	1	32725917-b821-48d6-97c6-16b123b905bd	Binaural tones	87
+45	Con Trai Cưng	1	0abed3f9-e4c1-49fc-96a8-458f8374cc1f	Binaural tones	70
+45	Con Trai Cưng	1	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Binaural tones	33
+45	Con Trai Cưng	1	fd705857-b301-44c9-b24c-496c8339ff70	Binaural tones	64
+45	Con Trai Cưng	1	32725917-b821-48d6-97c6-16b123b905bd	Binaural tones	88
+45	Con Trai Cưng	1	67ccf3ac-3fef-44d4-921b-a6362884ee23	Binaural tones	7
+45	Con Trai Cưng	1	fbe1519f-caf6-488b-bc3b-86eaad4534ad	Binaural tones	77
+45	Con Trai Cưng	1	7b6f8e1f-af45-47c7-8ea2-575a6165904f	Binaural tones	33
+45	Con Trai Cưng	1	fd705857-b301-44c9-b24c-496c8339ff70	Binaural tones	2
+45	Con Trai Cưng	1	67ccf3ac-3fef-44d4-921b-a6362884ee23	Binaural tones	65
+45	Con Trai Cưng	1	2fa26169-bc0f-411d-9b49-05a7feb14e35	Binaural tones	66
+45	Con Trai Cưng	1	8543829d-0ab0-4d9a-acc8-be4583ab9f5a	Binaural tones	3
+45	Con Trai Cưng	1	fd705857-b301-44c9-b24c-496c8339ff70	Binaural tones	87
