@@ -11,16 +11,16 @@ sns.set()
 pd.set_option("display.max_columns", None)
 
 
-def create_user_dict(interactions):
-    user_id = list(interactions.index)
-    user_dict = {}
+def create_mental_dict(interactions):
+    mental_id = list(interactions.index)
+    mental_dict = {}
     counter = 0
 
-    for i in user_id:
-        user_dict[i] = counter
+    for i in mental_id:
+        mental_dict[i] = counter
         counter += 1
 
-    new_dict = dict([(value, key) for key, value in user_dict.items()])
+    new_dict = dict([(value, key) for key, value in mental_dict.items()])
 
     return new_dict
 
@@ -35,7 +35,7 @@ def create_item_dict(df, id_col, name_col):
     return item_dict
 
 
-# Function to produce user recommendations
+# Function to produce mental recommendations
 def find_key_by_value(dictionary, value):
     for key, val in dictionary.items():
         if str(val) == str(value):
@@ -43,26 +43,26 @@ def find_key_by_value(dictionary, value):
     raise HTTPException(status_code=404, detail="No data")
 
 
-def sample_recommendation_user(
+def sample_recommendation_mental(
     model,
     interactions,
-    user_id,
-    user_dict,
+    mental_id,
+    mental_dict,
     item_dict,
     threshold=0,
     nrec_items=10,
     show=True,
 ):
     try:
-        n_users, n_items = interactions.shape
-        user_x = find_key_by_value(user_dict, user_id)
-        scores = pd.Series(model.predict(user_x, np.arange(n_items)))
+        n_mentals, n_items = interactions.shape
+        mental_x = find_key_by_value(mental_dict, mental_id)
+        scores = pd.Series(model.predict(mental_x, np.arange(n_items)))
         scores.index = interactions.columns
         scores = list(pd.Series(scores.sort_values(ascending=False).index))
         known_items = list(
             pd.Series(
-                interactions.loc[user_id, :][
-                    interactions.loc[user_id, :] > threshold
+                interactions.loc[mental_id, :][
+                    interactions.loc[mental_id, :] > threshold
                 ].index
             ).sort_values(ascending=False)
         )
@@ -73,7 +73,7 @@ def sample_recommendation_user(
         scores = list(pd.Series(return_score_list).apply(lambda x: item_dict[x]))
 
         if show == True:
-            print("Recommended songs for UserID:", user_id)
+            print("Recommended songs for mentalID:", mental_id)
             counter = 1
             for i in scores:
                 print(str(counter) + "- " + str(i))
@@ -81,7 +81,7 @@ def sample_recommendation_user(
 
         return return_score_list
     except Exception as e:
-        raise HTTPException(status_code=404, detail="No data for this user")
+        raise HTTPException(status_code=404, detail="No data for this mental")
 
 
 def create_item_emdedding_distance_matrix(model, interactions):

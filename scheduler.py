@@ -13,7 +13,7 @@ async def do_mid_night_every_day():
         conn = ConnectionDB()
         conn.train_model_audio_history()
         conn = ConnectionDB()
-        conn.train_model_user_genre_history()
+        conn.train_model_user_mental_health_history()
     except Exception as e:
         print(e)
 

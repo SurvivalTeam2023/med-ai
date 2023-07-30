@@ -51,17 +51,28 @@ class ConnectionDB:
         except Exception as e:
             print(e)
 
-    def train_model_user_genre_history(self):
-        prefix = "train_model_genre_history"
+    def train_model_user_mental_health_history(self):
+        prefix = "train_model_mental_"
         filename = self.create_path_file(prefix)
         try:
             query = text(
                 """
-                select a.id as audio_id ,a.name as audio_name, ag.genre_id, h.user_id, g.name as genre_name, h.count as audio_count
-                from history h
-                inner join audio a on a.id = h.audio_id
-                inner join audio_genre ag on ag.audio_id  = a.id
-                inner join genre g on ag.id = g.id
+                SELECT
+                h.user_id,
+                h.count AS audio_count,
+                hhl.id AS mental_id,
+                h.audio_id
+                FROM
+                history h
+                INNER JOIN (
+                    SELECT
+                    mhl.user_id, mh.id
+                    FROM
+                    mental_health_degree_log mhdl
+                    INNER JOIN mental_health_degree mhd ON mhd.id = mhdl.mental_health_degree_id
+                    INNER JOIN mental_health_log mhl ON mhl.id = mhdl.mentalHealthLogId
+                    INNER JOIN mental_health mh ON mh.id = mhdl.mental_health_id
+                ) hhl ON hhl.user_id = h.user_id;
                 """
             )
             df = pd.read_sql(query, self.connection)

@@ -3,9 +3,9 @@ from scheduler import app as app_rocketry
 from fastapi.middleware.cors import CORSMiddleware
 from database import ConnectionDB
 from services import (
+    get_audio_ids_recommend_by_mental_id,
     get_audio_ids_recommend_by_user_id,
     get_audio_similar_with_song_id,
-    get_audio_ids_recommend_by_genre_id,
 )
 
 app = FastAPI(
@@ -34,9 +34,9 @@ async def get_recommendation_by_user_id(user_id):
     return get_audio_ids_recommend_by_user_id(user_id=user_id)
 
 
-@router_recommendation.get("/recommendation/genre/")
-async def get_recommendation_by_genre_id(genre_id):
-    return get_audio_ids_recommend_by_genre_id(genre_id=genre_id)
+@router_recommendation.get("/recommendation/mental/")
+async def get_recommendation_by_mental_id(mental_id):
+    return get_audio_ids_recommend_by_mental_id(mental_id=mental_id)
 
 
 @router_recommendation.get("/recommendation/audio/")
@@ -48,6 +48,8 @@ async def get_recommendation_by_audio_id(audio_id):
 async def force_train_model():
     conn = ConnectionDB()
     conn.train_model_audio_history()
+    conn = ConnectionDB()
+    conn.train_model_user_mental_health_history()
     return True
 
 
