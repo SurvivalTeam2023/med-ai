@@ -11,11 +11,11 @@ pd.set_option("display.max_columns", None)
 
 
 def create_mental_dict(interactions):
-    mental_id = list(interactions.index)
+    mental_health_degree_id = list(interactions.index)
     mental_dict = {}
     counter = 0
 
-    for i in mental_id:
+    for i in mental_health_degree_id:
         mental_dict[i] = counter
         counter += 1
 
@@ -42,10 +42,10 @@ def find_key_by_value(dictionary, value):
     raise HTTPException(status_code=404, detail="No data")
 
 
-def sample_recommendation_mental(
+def sample_recommendation_mental_health_degree(
     model,
     interactions,
-    mental_id,
+    mental_health_degree_id,
     mental_dict,
     item_dict,
     threshold=0,
@@ -54,14 +54,14 @@ def sample_recommendation_mental(
 ):
     try:
         n_mentals, n_items = interactions.shape
-        mental_x = find_key_by_value(mental_dict, mental_id)
+        mental_x = find_key_by_value(mental_dict, mental_health_degree_id)
         scores = pd.Series(model.predict(mental_x, np.arange(n_items)))
         scores.index = interactions.columns
         scores = list(pd.Series(scores.sort_values(ascending=False).index))
         known_items = list(
             pd.Series(
-                interactions.loc[mental_id, :][
-                    interactions.loc[mental_id, :] > threshold
+                interactions.loc[mental_health_degree_id, :][
+                    interactions.loc[mental_health_degree_id, :] > threshold
                 ].index
             ).sort_values(ascending=False)
         )
@@ -72,7 +72,9 @@ def sample_recommendation_mental(
         scores = list(pd.Series(return_score_list).apply(lambda x: item_dict[x]))
 
         if show == True:
-            print("Recommended songs for mentalID:", mental_id)
+            print(
+                "Recommended songs for mental health degree:", mental_health_degree_id
+            )
             counter = 1
             for i in scores:
                 print(str(counter) + "- " + str(i))

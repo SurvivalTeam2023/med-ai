@@ -6,6 +6,7 @@ from services import (
     get_audio_ids_recommend_by_mental_id,
     get_audio_ids_recommend_by_user_id,
     get_audio_similar_with_song_id,
+    get_audio_ids_recommend_by_mental_health_degree,
 )
 
 app = FastAPI(
@@ -37,6 +38,16 @@ async def get_recommendation_by_user_id(user_id):
 @router_recommendation.get("/recommendation/mental/")
 async def get_recommendation_by_mental_id(mental_id):
     return get_audio_ids_recommend_by_mental_id(mental_id=mental_id)
+
+
+@router_recommendation.get("/recommendation/mentaldegree/")
+async def get_audio_ids_recommend_by_mental_health_degree_mental_health_id(
+    mental_health_degree_id, mental_id
+):
+    print(mental_health_degree_id, mental_id)
+    return get_audio_ids_recommend_by_mental_health_degree(
+        mental_health_degree_id=int(mental_health_degree_id), mental_id=int(mental_id)
+    )
 
 
 @router_recommendation.get("/recommendation/audio/")

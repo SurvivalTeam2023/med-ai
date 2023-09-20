@@ -37,10 +37,15 @@ class ConnectionDB:
         try:
             query = text(
                 """
-                SELECT h.audio_id AS audio_id, h.user_id, a.name AS audio_name, a2.username AS artist_name, h.count
-                FROM history h
-                INNER JOIN audio a ON a.id = h.audio_id
-                INNER JOIN artist a2 ON a2.id = a.artist_id
+                SELECT
+                    h.audio_id AS audio_id,
+                    h.user_id,
+                    a.name AS audio_name,
+                    h.count
+                FROM
+                    history h
+                INNER JOIN audio a ON
+                    a.id = h.audio_id
                 """
             )
             df = pd.read_sql(query, self.connection)
@@ -61,12 +66,13 @@ class ConnectionDB:
                 h.user_id,
                 h.count AS audio_count,
                 hhl.id AS mental_id,
-                h.audio_id
+                h.audio_id,
+                hhl.mental_health_degree_id
                 FROM
                 history h
                 INNER JOIN (
                     SELECT
-                    mhl.user_id, mh.id
+                    mhl.user_id, mh.id, mhdl.mental_health_degree_id
                     FROM
                     mental_health_degree_log mhdl
                     INNER JOIN mental_health_degree mhd ON mhd.id = mhdl.mental_health_degree_id

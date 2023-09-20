@@ -17,6 +17,12 @@ from popular_recomendation import popularity_recommender
 from lightfm import LightFM
 
 from recomendation_mental import sample_recommendation_mental
+from recomendation_mental_health_degree import (
+    sample_recommendation_mental_health_degree,
+)
+from popular_mental_health_degree_recomendation import (
+    popularity_mental_health_degree_recommender,
+)
 
 sns.set()
 pd.set_option("display.max_columns", None)
@@ -117,7 +123,41 @@ def get_audio_ids_recommend_by_mental_id(mental_id):
             mental_id=int(mental_id),
             mental_dict=mental_dict,
             item_dict=song_dict,
-            threshold=5,
+            threshold=50,
+            nrec_items=50,
+            show=True,
+        ),
+    )
+
+
+def get_audio_ids_recommend_by_mental_health_degree(mental_health_degree_id, mental_id):
+    print(mental_health_degree_id, mental_id)
+    data_model = load_model_latest_version(PREFIX_TRAIN_GENRE_MODEL)
+    raw_data = data_model.head(100000)
+    data_filter = raw_data[(raw_data["mental_id"] == mental_id)].reset_index(drop=True)
+    data = data_filter.groupby(["audio_id"]).agg({"audio_count": "count"}).reset_index()
+    data["percentage"] = (
+        data_filter["audio_count"].div(data_filter["audio_count"].sum()) * 100
+    )
+    pop_model = popularity_mental_health_degree_recommender()
+    pop_model.create(data_filter, "mental_health_degree_id", "audio_id")
+    x = data_filter.pivot_table(
+        index="mental_health_degree_id", columns="audio_id", values="audio_count"
+    )
+    x_nan = x.fillna(0)
+    interaction = sp.csr_matrix(x_nan.values)
+    hybrid_model = LightFM(loss="warp-kos", n=20, k=20, learning_schedule="adadelta")
+    hybrid_model.fit(interaction, epochs=30, num_threads=6)
+    mental_dict = create_genre_dict(interactions=x)
+    song_dict = create_item_dict(df=data_filter, id_col="audio_id", name_col="audio_id")
+    return (
+        sample_recommendation_mental_health_degree(
+            model=hybrid_model,
+            interactions=x,
+            mental_health_degree_id=int(mental_health_degree_id),
+            mental_dict=mental_dict,
+            item_dict=song_dict,
+            threshold=30,
             nrec_items=50,
             show=True,
         ),
